@@ -1,0 +1,51 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Usuário
+      room: Quarto
+    attributes:
+      user:
+        bio: Biografia
+        email: Email
+        full_name: Nome Completo
+        location: Localização
+        password: Senha
+        password_confirmation: Confirme sua senha
+      room:
+        description: Descrição
+        location: Localização
+        title: Título
+  users:
+    new:
+      title: Cadastro
+    edit:
+      title: Editar Perfil
+    show:
+      title: "Perfil: %{user_name}"
+      edit: 'Editar perfil'
+      location: "Localização: %{location}"
+      bio: "Bio: %{bio}"
+  rooms:
+    new:
+      title: Registrar Quarto
+    edit:
+      title: Editar Quarto
+      show: Visualizar
+    show:
+      title: "Quarto: %{title}"
+      edit: 'Editar quarto'
+      location: "Localização: %{location}"
+      description: "Descrição: %{description}"
+    index:
+      title: Lista de Quartos
+      new: 'Novo Quarto'
+      show: 'Visualizar'
+      edit: 'Editar'
+      destroy: 'Remover'
+  links:
+    back: Voltar
+  layout:
+    rooms: Quartos
+    signup: Cadastro
+  general:
+    form_error: Há erros no formulário, por favor verifique.
