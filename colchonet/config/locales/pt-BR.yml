@@ -42,6 +42,10 @@ pt-BR:
       show: 'Visualizar'
       edit: 'Editar'
       destroy: 'Remover'
+  user_sessions:
+    new:
+      title: 'Login'
+      sign_up: 'Cadastre-se'
   links:
     back: Voltar
   layout:
@@ -61,3 +65,18 @@ pt-BR:
       thanks_html: 'Obrigado por se cadastrar no %{link}'
   confirmations:
     success: Email confirmado com sucesso, obrigado!
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: 'Usuário ou senha inválidos'
+  helpers:
+    submit:
+      user_session:
+        create: 'Entrar'
+  flash:
+    notice:
+      signed_in: 'Login Efetuado com Sucesso!'

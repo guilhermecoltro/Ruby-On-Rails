@@ -1,4 +1,8 @@
+#encoding: utf-8
+
 class User < ActiveRecord::Base
+	scope :confirmed, -> { where.not(confirmed_at: nil) }
+
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
 	validates_presence_of :email, :full_name, :location
@@ -17,6 +21,12 @@ class User < ActiveRecord::Base
 		self.confirmed_at = Time.current
 		self.confirmation_token = ''
 		save!
+	end
+
+	def self.authenticate(email, password)
+		user = confirmed.
+				find_by(email: email).
+				try(:authenticate, password)
 	end
 
 	def confirmed?

@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
@@ -12,7 +14,7 @@ class UsersController < ApplicationController
 		if @user.save
 			Signup.confirm_email(@user).deliver
 
-			redirect_to @user, notice: 'Cadastro criado com sucesso!'
+			redirect_to @user, notice: 'Enviamos um e-mail para que você possa confirmar seu cadastro.'
 		else
 			render action: :new
 		end
