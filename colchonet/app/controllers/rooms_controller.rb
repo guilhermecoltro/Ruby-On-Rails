@@ -4,13 +4,16 @@ class RoomsController < ApplicationController
   # GET /rooms
   # GET /rooms.json
   def index
-    @rooms = Room.most_recent
+    @rooms = Room.most_recent.map do |room|
+      RoomPresenter.new(room, self, false)
+    end
   end
 
   # GET /rooms/1
   # GET /rooms/1.json
   def show
-    @room = Room.find(params[:id])
+    room_model = Room.find(params[:id])
+    @room = RoomPresenter.new(room_model, self)
   end
 
   # GET /rooms/new
