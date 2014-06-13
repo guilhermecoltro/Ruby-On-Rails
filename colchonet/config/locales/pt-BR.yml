@@ -37,9 +37,13 @@ pt-BR:
       location: "Localização: %{location}"
       description: "Descrição: %{description}"
     index:
-      title: Lista de Quartos
+      title: 'Quartos disponíveis'
       new: 'Novo Quarto'
       show: 'Visualizar'
+      edit: 'Editar'
+      destroy: 'Remover'
+    room:
+      owner_html: '&mdash; %{owner} (%{when})'
       edit: 'Editar'
       destroy: 'Remover'
   user_sessions:
@@ -50,7 +54,11 @@ pt-BR:
     back: Voltar
   layout:
     rooms: Quartos
+    new_room: Cadastre seu quarto!
     signup: Cadastro
+    signin: Login
+    my_profile: Meu Perfil
+    signout: Logout
   general:
     form_error: Há erros no formulário, por favor verifique.
   signup:
@@ -78,5 +86,12 @@ pt-BR:
       user_session:
         create: 'Entrar'
   flash:
+    alert:
+      needs_login: "Você precisa estar logado para continuar"
     notice:
       signed_in: 'Login Efetuado com Sucesso!'
+      signed_out: 'Logout efetuado com sucesso. Até logo!'
+      already_logged_in: "Você já está logado."
+      room_created: 'Quarto criado com Sucesso!'
+  dialogs:
+    destroy: 'Você tem certeza que quer remover?'
