@@ -15,6 +15,10 @@ class RoomPresenter
 		@context.user_signed_in?	
 	end
 
+	def is_creator?
+		@context.current_user == @room.user
+	end
+
 	def show_form?
 		@show_form		
 	end
@@ -34,6 +38,14 @@ class RoomPresenter
 
 	def review_points
 		Review::POINTS
+	end
+
+	def stars
+		@room.reviews.stars
+	end
+
+	def total_reviews
+		@room.reviews.size
 	end
 
 	def to_partial_path

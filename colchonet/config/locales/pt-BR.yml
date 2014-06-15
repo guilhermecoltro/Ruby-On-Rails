@@ -49,6 +49,10 @@ pt-BR:
       destroy: 'Remover'
     review:
       login_to_review: Faça o login para avaliar quartos
+      stats:
+        zero: 'Não há avaliações'
+        one: '(1 avaliação)'
+        other: '(%{count} avaliações)'
   user_sessions:
     new:
       title: 'Login'
