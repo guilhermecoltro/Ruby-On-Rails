@@ -16,6 +16,7 @@ pt-BR:
         description: Descrição
         location: Localização
         title: Título
+        picture: Foto
   users:
     new:
       title: Cadastro
@@ -39,10 +40,13 @@ pt-BR:
       description: "Descrição: %{description}"
     index:
       title: 'Quartos disponíveis'
+      search_results: 'Resultados da busca'
       new: 'Novo Quarto'
       show: 'Visualizar'
       edit: 'Editar'
       destroy: 'Remover'
+    search:
+      search_for: 'Buscar por...'
     room:
       owner_html: '&mdash; %{owner} (%{when})'
       edit: 'Editar'
